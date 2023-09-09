@@ -1,0 +1,18 @@
+<%= form_with(url: add_article_collection_path(collection), class: "contents", data: {controller: 'collection'}) do |form| %>
+  
+
+  <div class="my-5">
+    <%= form.label :author %>
+    <%= form.collection_select :author, Author.all, :id, :name, {prompt: ''}, {data: {action: 'change->collection#filter_articles'}} %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :article_ids %>
+    <%= form.collection_select :article_ids, Article.none, :id, :title, {prompt: ''}, {data: {collection_target: 'articles'}} %>
+  </div>
+
+  <div class="inline">
+    <%= form.submit 'Add Article', class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+  </div>
+  
+<% end %>

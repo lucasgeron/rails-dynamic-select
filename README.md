@@ -1,24 +1,26 @@
-# README
+# Dynamic Select with Rails and Hotwire Turbo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![rails dynamic select demo](https://i.ibb.co/1QcrgHP/20230908-192607.gif)
 
-Things you may want to cover:
+Rails Dynamic Select is a simple application to show how implement a dynamic select with Rails and Hotwire Turbo.
 
-* Ruby version
+In this application, we have three models, **Author**, **Article** and **Collection**.
 
-* System dependencies
+To demonstrate this functionality, we can add articles to a collection, filter the articles by author. When we select an author, the articles list will be updated with the articles of the selected author.
 
-* Configuration
+## Installation
+  - Clone this repository
+  - Install dependencies with `bundle install`
+  - Run the migrations with `rails db:migrate`
+  - Run the server with `./bin/dev`	
+  - Visit http://localhost:3000
+  - Ready to Use
 
-* Database creation
 
-* Database initialization
+Feel free to customize this application.
 
-* How to run the test suite
+## Tutorial Step by Step
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Check the tutorial step by step in 
+- [LinkedIn](https://www.linkedin.com/pulse/select-din%25C3%25A2mico-em-rails-com-hotwire-turbostimulus-geron/)
+- [lucasgeron.github.io](https://www.linkedin.com/pulse/select-din%25C3%25A2mico-em-rails-com-hotwire-turbostimulus-geron/)
