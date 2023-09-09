@@ -1,0 +1,26 @@
+<div id="<%= dom_id collection %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= collection.title %>
+  </p>
+
+    <p class="my-5">
+    <strong class="block font-medium mb-1">Articles: </strong>
+
+    <% if action_name =='show' %>
+     <%= render partial: 'articles_form', locals: {collection: @collection} %>
+       <% collection.articles.each do |article| %>
+       <%= render article %>
+       <%= button_to "Remover", remove_article_collection_path(collection, article_ids: article.id), method: :delete%>
+       <%end%>
+    <% else %>
+      <%= collection.articles.count %>
+    <% end %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this collection", collection, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this collection', edit_collection_path(collection), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
