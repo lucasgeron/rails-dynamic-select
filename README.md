@@ -12,7 +12,6 @@ To demonstrate this functionality, we can add articles to a collection, filter t
   - Clone this repository
   - Install dependencies with `bundle install`
   - Run the migrations with `rails db:migrate`
-  - Populate the database `rails db:seed`
   - Run the server with `./bin/dev`	
   - Visit http://localhost:3000
   - Ready to Use
